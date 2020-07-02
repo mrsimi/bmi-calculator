@@ -20,6 +20,11 @@ export default {
         return{
             height: 120
         }
+    },
+    watch: {
+      height: function(){
+        this.$emit("heightListener", parseInt(this.height));
+      }
     }
 }
 </script>
